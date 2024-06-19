@@ -5,7 +5,15 @@ with underscores (``). PascalCase is a string where the first char of each word
 is capital, all other chars lowercase.
 */
 
-// Your code here 
+function snakeToPascal(str) {
+    str = str.toLowerCase();
+    str = str.split('_');
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+        str[i] = str[i].split('')[0].toUpperCase() + str[i].slice(1);
+    }
+    return str.join('');
+}
 
 // console.log(snakeToPascal('snakes_go_hiss')); // 'SnakesGoHiss'
 // console.log(snakeToPascal('say_hello_world')); // 'SayHelloWorld'

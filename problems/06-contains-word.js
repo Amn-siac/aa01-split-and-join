@@ -5,7 +5,16 @@ found inside of the sentence. Solve this without using String's indexOf() or
 includes() methods.
 */
 
-// Your code here 
+function containsWord(sentence, targetWord) {
+    let boolean = false;
+    let words = sentence.split(' ');
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].toLowerCase() == targetWord.toLowerCase()) {
+            boolean = true;
+        }
+    }
+    return boolean;
+}
 
 // console.log(containsWord('sounds like a plan', 'like')); // true
 // console.log(containsWord('They are great', 'they')); // true

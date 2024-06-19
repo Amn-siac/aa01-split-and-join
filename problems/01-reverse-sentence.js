@@ -5,10 +5,17 @@ reversed. Note that you should reverse the order among words, not the order
 among characters.
 */
 
-// Your code here 
-
-// console.log(reverseSentence('I am pretty hungry')); // 'hungry pretty am I'
-// console.log(reverseSentence('follow the yellow brick road')); // 'road brick yellow the follow'
+function reverseSentence(sentence) {
+    sentence = sentence.split(' ');
+    let array = [];
+    for (let i = sentence.length - 1; i >= 0; i--) {
+        array.push(sentence[i])
+    }
+    array = array.join(' ');
+    return array;
+}
+console.log(reverseSentence('I am pretty hungry')); // 'hungry pretty am I'
+console.log(reverseSentence('follow the yellow brick road')); // 'road brick yellow the follow'
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = reverseSentence;
